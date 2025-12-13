@@ -5,7 +5,7 @@ export const PeopleSchema = new mongoose.Schema({
     name: { type: String, required: true },
     jobTitle: { type: String, required: true },
     department: { type: String, required: true },
-    managerId: { type: mongoose.Schema.Types.ObjectId, ref: 'People', default: null },
+    managerId: { type: Number, required: true, default: null },
     photoPath: { type: String, required: true }, 
     type: { type: String, required: true },
     status: { type: String, required: true },

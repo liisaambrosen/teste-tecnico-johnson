@@ -3,7 +3,7 @@ export interface People {
     name: string;
     jobTitle: string;
     department: string;
-    managerId?: string | null;
+    managerId: number | null;
     photoPath: string;
     type: string;
     status: string;
