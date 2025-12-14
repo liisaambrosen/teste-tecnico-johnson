@@ -124,7 +124,6 @@ Aplicação web full stack que exibe hierarquias organizacionais de formas diver
 | **MongoDB + Mongoose** | NoSQL permite flexibilidade para evoluir schemas, e performance excelente para a estrutura de dados atual. O Mongoose facilita a conexão da aplicação com banco e validação de schema. |
 | **class-validator & class-transformer** | Validação utilizando decorators, trasnformação automática de DTOs, conferindo integridade dos dados. |
 | **Jest** | Framework de testes compreensivo com excelente suport para Typescript, mocks e relatório de cobertura de testes. |
-| **ESLint + Prettier** | Reforçar qualidade e consistencia do código, reduzindo bugs e facilitando colaboração e padronização quando há multiplos desenvolvedores. |
 
 ### Frontend
 
@@ -135,13 +134,6 @@ Aplicação web full stack que exibe hierarquias organizacionais de formas diver
 | **Material-UI (MUI)** | Biblioteca de componentes de fácil compreensão, temas customizáveis e componentes prontos. |
 | **MUI Tree View** | Componente pronto para visualização de dados hierárquicos, evita "reinventar a roda" para árvores hierárquicas complexas. |
 | **Axios** | Client HTTP robusto com interceptors, cancelamento de requests, e que lida melhor com erros em comparação ao fetch nativo. |
-
-### DevOps & Tooling
-
-| Technology | Justificativa |
-|------------|---------------|
-| **Variáveis de ambiente** | Gerenciamento de configurações seguro mantendo informações sensíveis fora do código. |
-| **CORS** | Habilita requests cross-origin seguras entre frontend e backend durante desenvolviemento e produção. |
 
 ---
 
@@ -230,7 +222,6 @@ cd teste-tecnico-johnson
 
 ```bash
 cd backend
-```
 
 # Instalar dependências
 npm install
@@ -242,10 +233,12 @@ cp .env.example .env
 # MONGODB_URI=mongodb://localhost:27017/orgchart
 # PORT=3000
 
-# Importe os dados do arquivo org-chart-people-100.json para o seu MongoDB local ou crie usuários seguindo padrão Swagger para popular o banco. 
+# Importe os dados do arquivo org-chart-people-100.json para o seu MongoDB local
+# ou crie usuários seguindo padrão Swagger para popular o banco. 
 
 # Inicie o servidor
 npm run start:dev
+```
 
 O backend irá rodar em `http://localhost:3000`
 
@@ -255,7 +248,6 @@ Em uma nova janela do terminal:
 
 ```bash
 cd frontend/orgchart-frontend
-```
 
 # Instale dependências
 npm install
@@ -265,8 +257,9 @@ npm install
 
 # Inicie o servidor
 npm run dev
+```
 
-The frontend will be running at `http://localhost:5173`
+O frontend irá rodar em `http://localhost:5173`
 
 ---
 
