@@ -282,8 +282,6 @@ npm run test:cov
 
 ---
 
-## 🎁 Features extras implementadas
-
 ## Melhorias Futuras
 - Paginação via backend 
 - Filtros no backend a depender da necessidade
