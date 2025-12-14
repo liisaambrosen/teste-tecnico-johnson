@@ -1,14 +1,23 @@
-import { Card, CardContent, Avatar, Typography, Chip, Grid, Stack } from '@mui/material';
+import { Card, CardContent, Avatar, Typography, Chip, Grid, Stack, Pagination } from '@mui/material';
 import type { FormattedPeople } from '../types';
 import { useState } from 'react';
+import avatarImage from '../assets/random-background.png';
 
 interface Props { people: FormattedPeople[] }
 
 export default function PeopleList({ people }: Props) {
   const [openPersonId, setOpenPersonId] = useState<number | null>(null);
+  const [page, setPage] = useState<number>(1);
+  const pageSize = 9;
+  const pageCount = Math.max(1, Math.ceil(people.length / pageSize));
+  const start = (page - 1) * pageSize;
+  const end = start + pageSize;
+  const visiblePeople = people.slice(start, end);
+
   return (
+      <Stack spacing={2}>
       <Grid container spacing={2}>
-        {people.map(person => (
+        {visiblePeople.map(person => (
           <Grid size={{xs:12, sm:6, md:4}} key={person.id}>
           <Card 
             variant="outlined"
@@ -23,7 +32,7 @@ export default function PeopleList({ people }: Props) {
             <Stack spacing={2} alignItems="center" textAlign="center">
             <Stack direction="row" spacing={2} alignItems="center">
               <Avatar
-                src="https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-8.png"
+                src={avatarImage}
                 alt={person.name}
                 sx={{ mb: 1 }}
               />
@@ -56,5 +65,15 @@ export default function PeopleList({ people }: Props) {
           </Grid>
         ))}
       </Grid>
+      <Stack alignItems="center">
+        <Pagination
+          count={pageCount}
+          page={page}
+          onChange={(_, value) => setPage(value)}
+          color="primary"
+          sx={{ mt: 1, '& .Mui-selected': { backgroundColor: '#EB1700', color: '#FFFFFF', '&:hover': { backgroundColor: '#adacacff' } } }}
+        />
+      </Stack>
+      </Stack>
   );
 }
