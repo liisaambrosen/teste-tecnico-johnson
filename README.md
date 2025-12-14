@@ -17,8 +17,8 @@ Aplicação web full stack que exibe hierarquias organizacionais de formas diver
 
 ## 🌐 Links para aplicação deployada
 
-- **Frontend:** `[(https://orgchart-jnj-frontend.vercel.app/)]` 
-- **Backend API:** `[(https://teste-tecnico-johnson.onrender.com/api)]`
+- **Frontend:** <https://orgchart-jnj-frontend.vercel.app/>
+- **Backend API + Swagger:** <https://teste-tecnico-johnson.onrender.com/api>
 
 ---
 
