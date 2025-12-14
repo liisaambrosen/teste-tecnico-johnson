@@ -12,6 +12,4 @@ export const PeopleSchema = new mongoose.Schema({
     workEmail: { type: String, required: false },
     hireDate: { type: Date, required: false  },
     location: { type: String, required: false  },
-}, { collection: 'people' })
-
-PeopleSchema.index({ id: 1 });
+}, { collection: 'people' });
