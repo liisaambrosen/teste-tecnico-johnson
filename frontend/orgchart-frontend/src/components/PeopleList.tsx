@@ -71,7 +71,16 @@ export default function PeopleList({ people }: Props) {
           page={page}
           onChange={(_, value) => setPage(value)}
           color="primary"
-          sx={{ mt: 1, '& .Mui-selected': { backgroundColor: '#EB1700', color: '#FFFFFF', '&:hover': { backgroundColor: '#adacacff' } } }}
+          sx={{
+            mt: 1,
+            '& .MuiPaginationItem-root.Mui-selected': {
+              backgroundColor: '#EB1700',
+              color: '#FFFFFF',
+            },
+            '& .MuiPaginationItem-root.Mui-selected:hover': {
+              backgroundColor: '#a9a9a9ff',
+            },
+          }}
         />
       </Stack>
       </Stack>
