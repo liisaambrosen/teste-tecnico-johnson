@@ -1,0 +1,5 @@
+/* index.css cleared to avoid global overrides that conflict with Mantine components */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
