@@ -27,7 +27,7 @@ export default function FiltersBar({ departments, managers, filters, onChange }:
   const applySearch = () => setField('search', searchInput.trim() || '');
 
   return (
-    <Box sx={{ mb: 2, p: 1.5, borderRadius: 2, boxShadow: 1 }}>
+    <Box sx={{ mb: 2, p: 1.5, borderRadius: 2, boxShadow: 1, backgroundColor: '#FFFFFF' }}>
       {/* Row 1: Select filters */}
       <Stack
         direction={{ xs: 'column', sm: 'row' }}
@@ -95,7 +95,7 @@ export default function FiltersBar({ departments, managers, filters, onChange }:
             <MenuItem value="Inactive">Inactive</MenuItem>
           </Select>
         </FormControl>
-        <Button variant="outlined" size="small" onClick={clearAll}>Clear Filters</Button>
+        <Button variant="outlined" size="small" sx={{ color: "#EB1700", borderColor: "#EB1700"}} onClick={clearAll}>Clear Filters</Button>
       </Stack>
 
       {/* Row 2: Search input + button */}
@@ -109,7 +109,7 @@ export default function FiltersBar({ departments, managers, filters, onChange }:
           }}
           sx={{ minWidth: 240 }}
         />
-        <Button variant="contained" size="small" onClick={applySearch}>Search</Button>
+        <Button variant="contained" size="small" sx={{ backgroundColor: '#EB1700'}} onClick={applySearch}>Search</Button>
       </Stack>
     </Box>
   );
